@@ -55,8 +55,26 @@ int main() {
     aveTime = aveTime / 30;
     printf("\nAverage Time in x86 =  %f ns\n", aveTime);
     printf("x86 Code Dot Product = %lld\n \n", c);
-    int64_t c2 = 0;
+
     for (int i = 0; i < 30; i++) {
+        QueryPerformanceCounter(&li);
+        start = li.QuadPart;
+
+        ymm(ARRAY_SIZE, &c, a, b);
+
+        QueryPerformanceCounter(&li);
+        end = li.QuadPart;
+
+        elapse = ((double)(end - start)) * 1000.0 / PCFreq;
+        aveTime += elapse;
+        printf("Iteration %d Time in Ymm =  %f ns\n", i + 1, elapse);
+    }
+    aveTime = aveTime / 30;
+    printf("\nAverage Time in Ymm =  %f ns\n", aveTime);
+    printf("Ymm Code Dot Product = %lld\n \n", c);
+
+    int64_t c2 = 0;
+    for (int i = 0; i < 5; i++) {
         QueryPerformanceCounter(&li);
         start = li.QuadPart;
 
@@ -69,7 +87,7 @@ int main() {
         aveTime += elapse;
         printf("Iteration %d Time in C =  %f ns\n", i + 1, elapse);
     }
-    aveTime = aveTime / 30;
+    aveTime = aveTime / 5;
     printf("\nAverage Time in C =  %f ns\n", aveTime);
     printf("C Code Dot Product = %lld\n \n", c2);
 
