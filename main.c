@@ -6,6 +6,7 @@
 
 extern void x86(size_t n, int64_t* z, int64_t* x, int64_t* y);
 extern void ymm(size_t n, int64_t* z, int64_t* x, int64_t* y);
+extern void xmm(size_t n, int64_t* z, int64_t* x, int64_t* y);
 
 int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
     int64_t sum = 0;
@@ -55,6 +56,23 @@ int main() {
     aveTime = aveTime / 30;
     printf("\nAverage Time in x86 =  %f ns\n", aveTime);
     printf("x86 Code Dot Product = %lld\n \n", c);
+
+    for (int i = 0; i < 30; i++) {
+        QueryPerformanceCounter(&li);
+        start = li.QuadPart;
+
+        xmm(ARRAY_SIZE, &c, a, b);
+
+        QueryPerformanceCounter(&li);
+        end = li.QuadPart;
+
+        elapse = ((double)(end - start)) * 1000.0 / PCFreq;
+        aveTime += elapse;
+        printf("Iteration %d Time in Xmm =  %f ns\n", i + 1, elapse);
+    }
+    aveTime = aveTime / 30;
+    printf("\nAverage Time in Xmm =  %f ns\n", aveTime);
+    printf("Xmm Code Dot Product = %lld\n \n", c);
 
     for (int i = 0; i < 30; i++) {
         QueryPerformanceCounter(&li);

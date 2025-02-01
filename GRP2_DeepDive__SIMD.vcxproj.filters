@@ -26,5 +26,8 @@
     <CustomBuild Include="ymmfunc.asm">
       <Filter>Source Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="xmmfunc.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
