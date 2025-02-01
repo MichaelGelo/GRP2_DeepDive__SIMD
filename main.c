@@ -5,6 +5,7 @@
 #include <time.h>
 
 extern void x86(size_t n, int64_t* z, int64_t* x, int64_t* y);
+extern void ymm(size_t n, int64_t* z, int64_t* x, int64_t* y);
 
 int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
     int64_t sum = 0;
