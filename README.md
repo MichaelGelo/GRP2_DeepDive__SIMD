@@ -156,7 +156,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
     
 ---
 
-#### **YMM (SIMD 256-bit) Implementation**
+#### ---**Error Checking**---
 
   ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/error__checking.png)
 
