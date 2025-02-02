@@ -256,3 +256,5 @@ We had an "Aha!" moment when we learned how difficult it was to deal with the re
 
 Another "Aha!" moment occurred in release mode when we discovered a potential infinite loop. We observed that registers were incorrectly saved, resulting in overwrites and instability. We avoided overwrites by employing push-and-pop instructions to preserve non-volatile registers, which stabilized the execution flow.
 
+What surprised me the most was how much faster C got in release mode as a result of compiler optimizations, but debug mode was slower.
+
