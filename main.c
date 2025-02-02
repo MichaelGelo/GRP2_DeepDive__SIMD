@@ -20,7 +20,7 @@ int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
 
 int main() {
 
-    const size_t ARRAY_SIZE = 1 << 24;
+    const size_t ARRAY_SIZE = 1 << 30;
     int iteration = 30;
 
     const size_t ARRAY_BYTES = ARRAY_SIZE * sizeof(int64_t);
@@ -38,11 +38,9 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    srand((unsigned int)time(NULL));
-
     for (size_t i = 0; i < ARRAY_SIZE; i++) {
-        a[i] = rand() % 100;  
-        b[i] = rand() % 100;  
+        a[i] = 1;  
+        b[i] = 2;  
     }
 
     LARGE_INTEGER li;
@@ -67,11 +65,11 @@ int main() {
 
         elapse = ((double)(end - start)) * 1000.0 / PCFreq;
         c_aveTime += elapse;
-        printf("Iteration %d Time in C =  %f ns\n", i + 1, elapse);
+        printf("Iteration %d Time in C =  %f ms\n", i + 1, elapse);
     }
     c_aveTime = c_aveTime / iteration;
 
-    printf("\nAverage Time in C =  %f ns\n", c_aveTime);
+    printf("\nAverage Time in C =  %f ms\n", c_aveTime);
     printf("C Code Dot Product = %lld\n \n", c_answer);
 
     // --------- C Program end ---------
@@ -92,11 +90,11 @@ int main() {
     
     elapse = ((double)(end - start)) * 1000.0 / PCFreq;
     x86_aveTime += elapse;
-    printf("Iteration %d Time in x86 =  %f ns\n", i+1, elapse);
+    printf("Iteration %d Time in x86 =  %f ms\n", i+1, elapse);
     }
     x86_aveTime = x86_aveTime / iteration;
 
-    printf("\nAverage Time in x86 =  %f ns\n", x86_aveTime);
+    printf("\nAverage Time in x86 =  %f ms\n", x86_aveTime);
     printf("x86 Code Dot Product = %lld\n \n", c);
 
     x86_answer = c;
@@ -119,10 +117,10 @@ int main() {
 
         elapse = ((double)(end - start)) * 1000.0 / PCFreq;
         xmm_aveTime += elapse;
-        printf("Iteration %d Time in Xmm =  %f ns\n", i + 1, elapse);
+        printf("Iteration %d Time in Xmm =  %f ms\n", i + 1, elapse);
     }
     xmm_aveTime = xmm_aveTime / iteration;
-    printf("\nAverage Time in Xmm =  %f ns\n", xmm_aveTime);
+    printf("\nAverage Time in Xmm =  %f ms\n", xmm_aveTime);
     printf("Xmm Code Dot Product = %lld\n \n", c);
 
     xmm_answer = c;
@@ -145,10 +143,10 @@ int main() {
 
         elapse = ((double)(end - start)) * 1000.0 / PCFreq;
         ymm_aveTime += elapse;
-        printf("Iteration %d Time in Ymm =  %f ns\n", i + 1, elapse);
+        printf("Iteration %d Time in Ymm =  %f ms\n", i + 1, elapse);
     }
     ymm_aveTime = ymm_aveTime / iteration;
-    printf("\nAverage Time in Ymm =  %f ns\n", ymm_aveTime);
+    printf("\nAverage Time in Ymm =  %f ms\n", ymm_aveTime);
     printf("Ymm Code Dot Product = %lld\n \n", c);
 
     ymm_answer = c;
@@ -166,7 +164,7 @@ int main() {
 
     for (int i = 0; i < 4; i++) {
         if (answers[i] == c_answer) {
-            printf("%s program is correct.%s(Avg. Time: [%f ns])\n",
+            printf("%s program is correct.%s(Avg. Time: [%f ms])\n",
                 programs[i], padding[i], times[i]);
         }
         else {
