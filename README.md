@@ -38,6 +38,12 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 | **XMM (128-bit)**    |                           |                           |                           |                      |
 | **YMM (256-bit)**    |                           |                           |                           |                      |
 
+- **How many times faster**: 
+
+- **Why is it faster**: 
+
+- **Boundary handling**: 
+
 ---
 
 ### **iii.) Screenshot of the Program Output with Correctness Check**
