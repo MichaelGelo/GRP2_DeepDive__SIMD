@@ -206,7 +206,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ### **v.) Screenshot of the Program Output with Correctness Check**
 #### **XMM (SIMD 128-bit) Implementation**
 
-  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/x86_dotproduct.png)
+  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/082c429005d2d267dd87e09d30aa7e90860aac5c/BUILD/xmm_dotproduct.png)
 
 
 ---
