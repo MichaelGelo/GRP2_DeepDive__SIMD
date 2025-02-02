@@ -172,7 +172,9 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 | **XMM (128-bit)**    |          1.15×      |        1.39×       |      	5.81×        |
 | **YMM (256-bit)**    |          	1.45×      |        	1.57×       |      6.94×        |
 
-- **How many times faster**: 
+- **How many times faster**:
+- The results show that YMM (256-bit) is the fastest implementation, with a 6.94x speedup over C for large inputs (n = 2³⁰). XMM (128-bit) also performs well, reaching 5.81x speedup, while x86-64 sees a smaller boost, improving by 3.90x at n = 2³⁰. These improvements come from SIMD’s ability to process multiple data points at once, unlike C, which processes them one at a time.
+- With regards to the Debug mode and the Release mode, Debug mode is slower than Release mode because optimizations are turned off. But sometimes, for smaller inputs, Debug mode can appear faster because it doesn’t apply certain optimizations that may cause alignment issues in Release mode. When SIMD instructions in Release mode assume proper memory alignment but don’t get it, performance can suffer.
 
 - **Why is it faster**: 
 
