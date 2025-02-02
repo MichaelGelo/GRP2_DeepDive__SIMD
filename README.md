@@ -27,7 +27,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
     
       Array size (1<<20)
     
-      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474755074_1768305043952008_2711861187529911297_n.png)
+      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474755074_1768305043952008_2711861187529911297_n.png" alt="image alt" width="300"/>
 
       Array size (1<<26)
     
