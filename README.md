@@ -32,6 +32,15 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
 ### **ii.) Comparative Table of Execution Time and Performance Analysis**
 
+**Debug**
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
+|----------------------|---------------------------|---------------------------|---------------------------|----------------------|
+| **C**                |                           |                           |                           |                      |
+| **x86-64**           |                           |                           |                           |                      |
+| **XMM (128-bit)**    |                           |                           |                           |                      |
+| **YMM (256-bit)**    |                           |                           |                           |                      |
+
+**Release**
 | Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
 |----------------------|---------------------------|---------------------------|---------------------------|----------------------|
 | **C**                |                           |                           |                           |                      |
