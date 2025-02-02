@@ -6,7 +6,6 @@
 
 section .text
 global x86
-
 x86:
     ;rcx count,r8-1st source, r9- 2nd source, rdx - destination
 
