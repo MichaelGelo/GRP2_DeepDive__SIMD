@@ -23,6 +23,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
 ### **i.) Screenshot of the Program Output with Execution Time for All Cases**
 - **C**
+  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/2490d1ce6876ac6ca6e035f4c169b10eaeffe4e7/475723788_2370893926580143_8187849500300075197_n.png)
 - **x86-64 Non-SIMD Assembly**
 - **XMM (SIMD 128-bit)**
 - **YMM (SIMD 256-bit)**
