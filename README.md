@@ -100,12 +100,20 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 | **YMM (256-bit)**    |          3.756x      |        3.54x       |      76.05x        |
 
 **Release**
-| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
-|----------------------|---------------------------|---------------------------|---------------------------|----------------------|
-| **C**                |                           |                           |                           |                      |
-| **x86-64**           |                           |                           |                           |                      |
-| **XMM (128-bit)**    |                           |                           |                           |                      |
-| **YMM (256-bit)**    |                           |                           |                           |                      |
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) |
+|----------------------|---------------------------|---------------------------|---------------------------|
+| **C**                |          1.306817 ms      |        111.227407 ms      |      3002.768260 ms      |
+| **x86-64**           |          1.761937 ms       |       106.111647 ms       |      769.962460 ms      |
+| **XMM (128-bit)**    |          1.134067 ms       |        80.076593 ms       |      516.745833 ms        |
+| **YMM (256-bit)**    |          0.902483 ms      |        71.036623 ms       |      432.863150 ms        |
+
+**Performance Analysis for Release (in Comparison to C)**
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) |
+|----------------------|---------------------------|---------------------------|---------------------------|
+| **C**                |          1x      |        1x      |      1x      |
+| **x86-64**           |          0.74×      |        	1.05×       |      3.90×      |
+| **XMM (128-bit)**    |          1.15×      |        1.39×       |      	5.81×        |
+| **YMM (256-bit)**    |          	1.45×      |        	1.57×       |      6.94×        |
 
 - **How many times faster**: 
 
