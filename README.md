@@ -37,10 +37,10 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 **Debug**
 | Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
 |----------------------|---------------------------|---------------------------|---------------------------|----------------------|
-| **C**                |                           |                           |                           |                      |
-| **x86-64**           |                           |                           |                           |                      |
-| **XMM (128-bit)**    |                           |                           |                           |                      |
-| **YMM (256-bit)**    |                           |                           |                           |                      |
+| **C**                |          5.081043 ms      |        223.711563 ms      |      34487.541990 ms      |                      |
+| **x86-64**           |          1.40957 ms       |        71.309053 ms       |      14103.381637 ms      |                      |
+| **XMM (128-bit)**    |          1.41296 ms       |        65.470357 ms       |      489.248630 ms        |                      |
+| **YMM (256-bit)**    |          1.352737 ms      |        63.203943 ms       |      453.486163 ms        |                      |
 
 **Release**
 | Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
