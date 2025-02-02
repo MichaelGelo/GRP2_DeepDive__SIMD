@@ -22,7 +22,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ---
 
 ### **i.) Screenshot of the Program Output with Execution Time for All Cases**
-**DEBUGGED**
+## **Debugged**
   - **C**
     
       Array size (1<<20)
@@ -79,12 +79,12 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
     
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474723815_549255591483961_3357579152647604848_n.png)
     
-**RELEASE**
+## **Release**
   - **C**
     
       Array size (1<<20)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/8142a23e1828befeee5964648c95207c7c509f22/BUILD/C%20Release%2020.png)
 
       Array size (1<<26)
     
@@ -92,13 +92,13 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
       Array size (1<<30)
       
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/8142a23e1828befeee5964648c95207c7c509f22/BUILD/C%20Release%2030.jpg)
     
   - **x86-64 Non-SIMD Assembly**
 
       Array size (1<<20)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/x86%20Release%2020.png)
 
       Array size (1<<26)
     
@@ -106,13 +106,13 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
       Array size (1<<30)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/x86%20Release%2030.jpg)
       
   - **XMM (SIMD 128-bit)**
 
       Array size (1<<20)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/XMM%20Release%2020.png)
 
       Array size (1<<26)
     
@@ -120,13 +120,13 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
       Array size (1<<30)
       
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/XMM%20Release%2030.jpg)
       
   - **YMM (SIMD 256-bit)**
 
       Array size (1<<20)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/YMM%20Release%2020.png)
 
       Array size (1<<26)
     
@@ -134,7 +134,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
       Array size (1<<30)
     
-      ![image alt]()
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/3737c41a0b4c012eff76a2462217dc072788375e/BUILD/YMM%20Release%2030.jpg)
 
 ---
 
