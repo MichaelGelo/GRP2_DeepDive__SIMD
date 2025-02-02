@@ -243,7 +243,7 @@ The AVX256 program computes the dot product similarly to the XMM implementation.
 
   ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/error__checking.png)
 
-The error checking for all the programs is done after the execution of all the programs. To verify if the results are correct, the values in C, x86-64, XMM, and YMM are compared to the results from the C program. A print statement is done based on the results of the comparison.
+**The error checking for all the programs is done after the execution of all the programs. To verify if the results are correct, the values in C, x86-64, XMM, and YMM are compared to the results from the C program. A print statement is done based on the results of the comparison.**
 ---
 ### **vii.) Discussion**
 
