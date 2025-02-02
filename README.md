@@ -246,3 +246,8 @@ A limitation of **SIMD is that it only works efficiently when the data size is a
 
 ---
 ### **vii.) Discussion**
+
+We had an "Aha!" moment when we learned how difficult it was to deal with the remaining elements (butal) during SIMD initialization. Because XMM and YMM registers handle fixed-width elements, we needed to load as many elements as possible into YMM (4 for 64-bit values) and XMM (2 for 64-bit values). We made use of scalar multiplication to process the remaining elements. For example, out of 10 values, 8 were processed using YMM (4 values per YMM register), while the remaining 2 were handled using scalar (x86) operations.
+
+Another "Aha!" moment occurred in release mode when we discovered a potential infinite loop. We observed that registers were incorrectly saved, resulting in overwrites and instability. We avoided overwrites by employing push-and-pop instructions to preserve non-volatile registers, which stabilized the execution flow.
+
