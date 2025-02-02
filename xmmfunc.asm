@@ -1,4 +1,5 @@
 section .text
+default rel
 global xmm
 xmm:
     xor rax, rax                  

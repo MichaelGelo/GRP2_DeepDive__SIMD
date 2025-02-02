@@ -19,10 +19,12 @@ int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
 }
 
 int main() {
+
     const size_t ARRAY_SIZE = 1 << 24;
-    int iteration = 5;
+    int iteration = 30;
+
     const size_t ARRAY_BYTES = ARRAY_SIZE * sizeof(int64_t);
-    printf("Number of elements = %zu\n", ARRAY_SIZE);
+    printf("Number of elements = %zu\n\n", ARRAY_SIZE);
 
     int64_t* a = (int64_t*)malloc(ARRAY_BYTES);
     int64_t* b = (int64_t*)malloc(ARRAY_BYTES);
@@ -50,6 +52,9 @@ int main() {
     PCFreq = (double)(li.QuadPart);
 
     // --------- C Program start ---------
+    printf("============================================\n");
+    printf("                 C Program\n");
+    printf("============================================\n");
     int64_t c_answer = 0;
     for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
@@ -65,12 +70,16 @@ int main() {
         printf("Iteration %d Time in C =  %f ns\n", i + 1, elapse);
     }
     c_aveTime = c_aveTime / iteration;
+
     printf("\nAverage Time in C =  %f ns\n", c_aveTime);
     printf("C Code Dot Product = %lld\n \n", c_answer);
 
     // --------- C Program end ---------
 
     // --------- x86-64 start ---------
+    printf("============================================\n");
+    printf("              X86-64 Program\n");
+    printf("============================================\n");
     int64_t x86_answer = 0;
     for (int i = 0; i < iteration; i++) {
     QueryPerformanceCounter(&li);
@@ -86,13 +95,18 @@ int main() {
     printf("Iteration %d Time in x86 =  %f ns\n", i+1, elapse);
     }
     x86_aveTime = x86_aveTime / iteration;
+
     printf("\nAverage Time in x86 =  %f ns\n", x86_aveTime);
     printf("x86 Code Dot Product = %lld\n \n", c);
 
     x86_answer = c;
+
     // --------- x86-64 end ---------
 
     // --------- xmm start ---------
+    printf("============================================\n");
+    printf("                XMM Program\n");
+    printf("============================================\n");
     int64_t xmm_answer = 0;
     for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
@@ -112,9 +126,13 @@ int main() {
     printf("Xmm Code Dot Product = %lld\n \n", c);
 
     xmm_answer = c;
+
     // --------- xmm end ---------
 
     // --------- ymm start ---------
+    printf("============================================\n");
+    printf("                YMM Program\n");
+    printf("============================================\n");
     int64_t ymm_answer = 0;
     for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
@@ -134,10 +152,13 @@ int main() {
     printf("Ymm Code Dot Product = %lld\n \n", c);
 
     ymm_answer = c;
+
     // --------- ymm end ---------
 
     // --------- error checking start ---------
-    printf("----------------------------------------\n");
+    printf("=============================================================\n");
+    printf("                       Error Checking\n");
+    printf("=============================================================\n");
     const char* programs[] = { "C", "X86-64", "XMM", "YMM" };
     int64_t answers[] = { c_answer, x86_answer, xmm_answer, ymm_answer };
     double times[] = { c_aveTime, x86_aveTime, xmm_aveTime, ymm_aveTime };
@@ -152,8 +173,8 @@ int main() {
             printf("Error. %s program is incorrect\n", programs[i]);
         }
     }
-    printf("----------------------------------------\n");
 
+    printf("=============================================================\n");
     // --------- error checking end ---------
 
     free(a);

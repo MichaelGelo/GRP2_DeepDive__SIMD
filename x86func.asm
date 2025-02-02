@@ -5,6 +5,7 @@
 ;long       64      8        rax       dq (QWORD)     
 
 section .text
+default rel
 global x86
 x86:
     ;rcx count,r8-1st source, r9- 2nd source, rdx - destination
