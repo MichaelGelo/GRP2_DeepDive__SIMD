@@ -25,17 +25,20 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ## **Debug**
   - **C**
     
-      Array size (1<<20)
-    
-      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474755074_1768305043952008_2711861187529911297_n.png" alt="image alt" width="300"/>
+     Array size (1<<20)                         Array size (1<<26)                         Array size (1<<30)
 
-      Array size (1<<26)
-    
-      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475272895_1325767355289146_1545542814377239726_n.png" alt="image alt" width="300"/>
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474755074_1768305043952008_2711861187529911297_n.png" alt="image alt" width="300"/>
+    </div>
+    <div>
+        <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475272895_1325767355289146_1545542814377239726_n.png" alt="image alt" width="300"/>
+    </div>
+    <div>
+        <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269360_2164573430681115_1307590721420646016_n.png" alt="image alt" width="300"/>
+    </div>
+</div>
 
-      Array size (1<<30)
-
-      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269360_2164573430681115_1307590721420646016_n.png" alt="image alt" width="300"/>
     
   - **x86-64 Non-SIMD Assembly**
 
