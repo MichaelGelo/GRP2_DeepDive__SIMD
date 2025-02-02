@@ -177,12 +177,12 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ### **How Many Times Faster?**  
 
 The results show that **YMM (256-bit) is the fastest implementation**, with a **6.94x speedup over C for large inputs (n = 2³⁰)**.  
-**XMM (128-bit) also performs well, reaching 5.81x speedup**, while **x86-64 sees a smaller boost, improving by 3.90x at n = 2³⁰**.  
-These improvements come from **SIMD’s ability to process multiple data points at once**, unlike **C, which processes them one at a time**.  
+**XMM (128-bit) also performs good, reaching 5.81x speedup**, while **x86-64 is faster but only a bit compared to the other SIMD implementations by 3.90x at n = 2³⁰**.  
+These improvements come from **SIMD’s ability to process multiple data points at once**, unlike **C which processes them one at a time**.  
 
 With regards to **Debug mode and Release mode**, **Debug mode is slower than Release mode** because **optimizations are turned off**.  
 However, **for smaller inputs, Debug mode can sometimes appear faster** because it **doesn’t apply certain optimizations that may cause alignment issues in Release mode**.  
-When **SIMD instructions in Release mode assume proper memory alignment but don’t get it**, **performance can suffer**.  
+When **SIMD instructions in Release mode assume proper memory alignment but the code might not be optimized**, **performance can suffer**.  
 
 ---
 
@@ -190,19 +190,19 @@ When **SIMD instructions in Release mode assume proper memory alignment but don�
 
 **SIMD is much faster than C because it can process multiple numbers at the same time**.  
 While **C goes through one multiplication at a time**, **XMM can handle two, and YMM can do four in a single step**.  
-This means **the loop runs fewer times**, there's **less overhead**, and **everything gets done much faster**.  
+This means **the loop runs fewer times**, there's **less overhead**, and **everything is done much faster**.  
 
 
 Another big reason is **memory access**.  
 The C version **keeps reading and writing data from memory**, which slows things down because of **cache misses and waiting for data to load**.  
-SIMD avoids this by **doing most of its calculations inside CPU registers**, so **it doesn’t have to wait around for memory**.  
-This makes a huge difference—**C spends a lot of time just moving data**, while **SIMD gets straight to the calculations, making it way more efficient**.  
+SIMD avoids this by **doing most of its calculations inside CPU registers**, so **it doesn’t have to wait for memory**.  
+**C spends a lot of time just moving data**, while **SIMD gets straight to the calculations, making it way more efficient**.  
 
 ---
 
 ### **Boundary Handling**
 
-A limitation of **SIMD is that it only works efficiently when the data size is a perfect multiple of its register width** (**2 for XMM, 4 for YMM**).If the dataset **doesn’t fit neatly into these chunks**, there will be **leftover values that can’t be processed in SIMD instructions**.These need to be **handled separately using scalar operations**, which are **slower**.
+A limitation of **SIMD is that it only works efficiently when the data size is a perfect multiple of its register width** (**2 for XMM, 4 for YMM**). If the dataset **doesn’t fit into the chunks**, there will be **leftover values that can’t be processed in SIMD instructions**. These need to be **handled separately using scalar operations**, which are **slower**.
 
 ---
 
