@@ -136,36 +136,27 @@ int main() {
     // --------- ymm end ---------
 
     // --------- error checking start ---------
-
     printf("----------------------------------------\n");
-    // x86-64
-    if (x86_answer == c_answer) {
-        printf("x86-64 program is correct\n");
-    }
-    else {
-        printf("Error. x86-64 program is incorrect\n");
-    }
+    const char* programs[] = { "C", "X86-64", "XMM", "YMM" };
+    int64_t answers[] = { c_answer, x86_answer, xmm_answer, ymm_answer };
+    double times[] = { c_aveTime, x86_aveTime, xmm_aveTime, ymm_aveTime };
+    const char* padding[] = { "       ", "  ", "     ", "     " };
 
-    // xmm
-    if (xmm_answer == c_answer) {
-        printf("xmm program is correct\n");
+    for (int i = 0; i < 4; i++) {
+        if (answers[i] == c_answer) {
+            printf("%s program is correct.%s(Avg. Time: [%f ns])\n",
+                programs[i], padding[i], times[i]);
+        }
+        else {
+            printf("Error. %s program is incorrect\n", programs[i]);
+        }
     }
-    else {
-        printf("Error. xmm program is incorrect\n");
-    }
-
-    // ymm
-    if (ymm_answer == c_answer) {
-        printf("ymm program is correct\n");
-    }
-    else {
-        printf("Error. ymm program is incorrect\n");
-    }
-
     printf("----------------------------------------\n");
+
+    // --------- error checking end ---------
+
     free(a);
     free(b);
-
 
     return 0;
 }
