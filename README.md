@@ -192,6 +192,7 @@ When **SIMD instructions in Release mode assume proper memory alignment but don�
 While **C goes through one multiplication at a time**, **XMM can handle two, and YMM can do four in a single step**.  
 This means **the loop runs fewer times**, there's **less overhead**, and **everything gets done much faster**.  
 
+
 Another big reason is **memory access**.  
 The C version **keeps reading and writing data from memory**, which slows things down because of **cache misses and waiting for data to load**.  
 SIMD avoids this by **doing most of its calculations inside CPU registers**, so **it doesn’t have to wait around for memory**.  
@@ -199,11 +200,10 @@ This makes a huge difference—**C spends a lot of time just moving data**, whil
 
 ---
 
-### **Boundary Handling**  
+### **Boundary Handling**
 
-A limitation of **SIMD is that it only works efficiently when the data size is a perfect multiple of its register width** (**2 for XMM, 4 for YMM**).  
-If the dataset **doesn’t fit neatly into these chunks**, there will be **leftover values that can’t be processed in SIMD instructions**.  
-These need to be **handled separately using scalar operations**, which are **slower**.  
+A limitation of **SIMD is that it only works efficiently when the data size is a perfect multiple of its register width** (**2 for XMM, 4 for YMM**).If the dataset **doesn’t fit neatly into these chunks**, there will be **leftover values that can’t be processed in SIMD instructions**.These need to be **handled separately using scalar operations**, which are **slower**.
+
 ---
 
 ### **iii.) Screenshot of the Program Output with Correctness Check**
