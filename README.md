@@ -57,12 +57,20 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ### **ii.) Comparative Table of Execution Time and Performance Analysis**
 
 **Debug**
-| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
-|----------------------|---------------------------|---------------------------|---------------------------|----------------------|
-| **C**                |          5.081043 ms      |        223.711563 ms      |      34487.541990 ms      |                      |
-| **x86-64**           |          1.40957 ms       |        71.309053 ms       |      14103.381637 ms      |                      |
-| **XMM (128-bit)**    |          1.41296 ms       |        65.470357 ms       |      489.248630 ms        |                      |
-| **YMM (256-bit)**    |          1.352737 ms      |        63.203943 ms       |      453.486163 ms        |                      |
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) |
+|----------------------|---------------------------|---------------------------|---------------------------|
+| **C**                |          5.081043 ms      |        223.711563 ms      |      34487.541990 ms      |
+| **x86-64**           |          1.40957 ms       |        71.309053 ms       |      14103.381637 ms      |
+| **XMM (128-bit)**    |          1.41296 ms       |        65.470357 ms       |      489.248630 ms        |
+| **YMM (256-bit)**    |          1.352737 ms      |        63.203943 ms       |      453.486163 ms        |
+
+**Performance Analysis for Debug (in Comparison to C)**
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) |
+|----------------------|---------------------------|---------------------------|---------------------------|
+| **C**                |          1x      |        1x      |      1x      |
+| **x86-64**           |          3.605x      |        3.137x       |      2.445x      |
+| **XMM (128-bit)**    |          3.596x      |        3.417x       |      70.491x        |
+| **YMM (256-bit)**    |          3.756x      |        3.54x       |      76.05x        |
 
 **Release**
 | Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
