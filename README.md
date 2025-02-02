@@ -78,7 +78,64 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
       Array size (1<<30)
     
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474723815_549255591483961_3357579152647604848_n.png)
+    
 **RELEASE**
+  - **C**
+    
+      Array size (1<<20)
+    
+      ![image alt]()
+
+      Array size (1<<26)
+    
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/60d3544279e246df24da745c40ae7c945aad6450/BUILD/C%20Release%2026.jpg)
+
+      Array size (1<<30)
+      
+      ![image alt]()
+    
+  - **x86-64 Non-SIMD Assembly**
+
+      Array size (1<<20)
+    
+      ![image alt]()
+
+      Array size (1<<26)
+    
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/60d3544279e246df24da745c40ae7c945aad6450/BUILD/x86%20Release%2026.jpg)
+
+      Array size (1<<30)
+    
+      ![image alt]()
+      
+  - **XMM (SIMD 128-bit)**
+
+      Array size (1<<20)
+    
+      ![image alt]()
+
+      Array size (1<<26)
+    
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/60d3544279e246df24da745c40ae7c945aad6450/BUILD/XMM%20Release%2026.jpg)
+
+      Array size (1<<30)
+      
+      ![image alt]()
+      
+  - **YMM (SIMD 256-bit)**
+
+      Array size (1<<20)
+    
+      ![image alt]()
+
+      Array size (1<<26)
+    
+      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/60d3544279e246df24da745c40ae7c945aad6450/BUILD/YMM%20Release%2026.jpg)
+
+      Array size (1<<30)
+    
+      ![image alt]()
+
 ---
 
 ### **ii.) Comparative Table of Execution Time and Performance Analysis**
