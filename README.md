@@ -145,8 +145,8 @@ A limitation of **SIMD is that it only works efficiently when the data size is a
 ### **iii.) Screenshot of the Program Output with Correctness Check**
 
 ### **C Implementation**
-    
-  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/994562fb12fc836ea42b077cd0c33300f6dceeec/BUILD/c_dotproduct.png)
+
+  <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/994562fb12fc836ea42b077cd0c33300f6dceeec/BUILD/c_dotproduct.png" alt="image alt" width="600"/>
     
 The program to compute for the dot product in C is a simple for loop that iterates through all the values in the a and b array and gets the sum of the products of both.
 
@@ -155,7 +155,7 @@ The program to compute for the dot product in C is a simple for loop that iterat
 ### **iv.) Screenshot of the Program Output with Correctness Check**
 #### **x86-64 Implementation**
 
-   ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/x86_dotproduct.png)
+   <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/x86_dotproduct.png" alt="image alt" width="600"/>
 
 The x86-64 program computes for the dot product by loading vector a and b into registers r10 and r11.After that, the r10 and r11 are multiplied to each other, with the results getting added into rax. 8 is then added to r8 and r9 to increment the array index by 1, which is 8 bytes. this whole block of code is then put into a loop for an amount initialized onto rcx.
 
@@ -164,7 +164,7 @@ The x86-64 program computes for the dot product by loading vector a and b into r
 ### **v.) Screenshot of the Program Output with Correctness Check**
 #### **XMM (SIMD 128-bit) Implementation**
 
-  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/082c429005d2d267dd87e09d30aa7e90860aac5c/BUILD/xmm_dotproduct.png)
+  <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/082c429005d2d267dd87e09d30aa7e90860aac5c/BUILD/xmm_dotproduct.png" alt="image alt" width="600"/>
 
 The XMM program computes the dot product in a similar way to the x86-64, but with the xmm syntaxes for each instruction. The main difference is that the xmm implementation allows it to compute multiple values at once. The xmm register can process 2 indexes at once, which is why the rbx is subtracted by 2 after each iteration in L1. Following that, the "REMAINING" code block is for the values in vector a and b that do not fit into the xmm register. These values are simply multiplied and added into the overall sum.
 
@@ -173,7 +173,7 @@ The XMM program computes the dot product in a similar way to the x86-64, but wit
 ### **vi.) Screenshot of the Program Output with Correctness Check**
 #### **YMM (SIMD 256-bit) Implementation**
 
-  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/ymm_dotproduct.png)
+  <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/ymm_dotproduct.png" alt="image alt" width="600"/>
 
 The AVX256 program computes the dot product similarly to the XMM implementation. The way that the L1 loop is set up and the REMAINING block right after are similar in function. The key difference for the AVX256 implementation is that the ymm registers are larger than the xmm registers and can hold twice the value of the xmm register. This means that the iterations can handle up to 4 indexes and the values subtracted to the rcx is now changed to 4. There is also a loop introduced to the REMAINING block since there are more remaining index values that the ymm register cannot process fully. 
 
@@ -181,7 +181,7 @@ The AVX256 program computes the dot product similarly to the XMM implementation.
 
 #### ---**Error Checking**---
 
-  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/error__checking.png)
+  <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/error__checking.png" alt="image alt" width="600"/>
 
 The error checking for all the programs is done after the execution of all the programs. To verify if the results are correct, the values in C, x86-64, XMM, and YMM are compared to the results from the C program. A print statement is done based on the results of the comparison.
 
