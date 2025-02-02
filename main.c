@@ -20,6 +20,7 @@ int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
 
 int main() {
     const size_t ARRAY_SIZE = 1 << 24;
+    int iteration = 5;
     const size_t ARRAY_BYTES = ARRAY_SIZE * sizeof(int64_t);
     printf("Number of elements = %zu\n", ARRAY_SIZE);
 
@@ -50,7 +51,7 @@ int main() {
 
     // --------- C Program start ---------
     int64_t c_answer = 0;
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
         start = li.QuadPart;
 
@@ -63,7 +64,7 @@ int main() {
         c_aveTime += elapse;
         printf("Iteration %d Time in C =  %f ns\n", i + 1, elapse);
     }
-    c_aveTime = c_aveTime / 30;
+    c_aveTime = c_aveTime / iteration;
     printf("\nAverage Time in C =  %f ns\n", c_aveTime);
     printf("C Code Dot Product = %lld\n \n", c_answer);
 
@@ -71,7 +72,7 @@ int main() {
 
     // --------- x86-64 start ---------
     int64_t x86_answer = 0;
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < iteration; i++) {
     QueryPerformanceCounter(&li);
     start = li.QuadPart;
 
@@ -84,7 +85,7 @@ int main() {
     x86_aveTime += elapse;
     printf("Iteration %d Time in x86 =  %f ns\n", i+1, elapse);
     }
-    x86_aveTime = x86_aveTime / 30;
+    x86_aveTime = x86_aveTime / iteration;
     printf("\nAverage Time in x86 =  %f ns\n", x86_aveTime);
     printf("x86 Code Dot Product = %lld\n \n", c);
 
@@ -93,7 +94,7 @@ int main() {
 
     // --------- xmm start ---------
     int64_t xmm_answer = 0;
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
         start = li.QuadPart;
 
@@ -106,7 +107,7 @@ int main() {
         xmm_aveTime += elapse;
         printf("Iteration %d Time in Xmm =  %f ns\n", i + 1, elapse);
     }
-    xmm_aveTime = xmm_aveTime / 30;
+    xmm_aveTime = xmm_aveTime / iteration;
     printf("\nAverage Time in Xmm =  %f ns\n", xmm_aveTime);
     printf("Xmm Code Dot Product = %lld\n \n", c);
 
@@ -115,7 +116,7 @@ int main() {
 
     // --------- ymm start ---------
     int64_t ymm_answer = 0;
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < iteration; i++) {
         QueryPerformanceCounter(&li);
         start = li.QuadPart;
 
@@ -128,7 +129,7 @@ int main() {
         ymm_aveTime += elapse;
         printf("Iteration %d Time in Ymm =  %f ns\n", i + 1, elapse);
     }
-    ymm_aveTime = ymm_aveTime / 30;
+    ymm_aveTime = ymm_aveTime / iteration;
     printf("\nAverage Time in Ymm =  %f ns\n", ymm_aveTime);
     printf("Ymm Code Dot Product = %lld\n \n", c);
 
