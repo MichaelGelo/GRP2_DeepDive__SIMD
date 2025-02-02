@@ -22,7 +22,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ---
 
 ### **i.) Screenshot of the Program Output with Execution Time for All Cases**
-## **Debugged**
+## **Debug**
   - **C**
     
       Array size (1<<20)
@@ -34,22 +34,22 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
       <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475272895_1325767355289146_1545542814377239726_n.png" alt="image alt" width="300"/>
 
       Array size (1<<30)
-      
-      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269360_2164573430681115_1307590721420646016_n.png)
+
+      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269360_2164573430681115_1307590721420646016_n.png" alt="image alt" width="300"/>
     
   - **x86-64 Non-SIMD Assembly**
 
       Array size (1<<20)
-    
-      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475194725_1736496846911762_735406358650725671_n.png)
+
+      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475194725_1736496846911762_735406358650725671_n.png" alt="image alt" width="300"/>
 
       Array size (1<<26)
-    
-      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475442694_1125300672399420_2517737751647477588_n.png)
+
+      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475442694_1125300672399420_2517737751647477588_n.png" alt="image alt" width="300"/>
 
       Array size (1<<30)
-    
-      ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475385528_1508077773913869_8691960589247389294_n.png)
+
+      <img src="https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475385528_1508077773913869_8691960589247389294_n.png" alt="image alt" width="300"/>
       
   - **XMM (SIMD 128-bit)**
 
