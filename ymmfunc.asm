@@ -3,6 +3,7 @@ default rel
 global ymm
 
 ymm:
+
     ; rcx = count, rdx = destination (pointer), r8 = first source, r9 = second source
     xor rax, rax               
 L1:
@@ -19,8 +20,8 @@ L1:
 REMAINING:
     cmp rcx, 0
     je FINIS                    
-    mov rdi, [r8 + rsi]         
-    imul rdi, [r9 + rsi]        
+    mov rdi, [r8]         
+    imul rdi, [r9]        
     add rax, rdi               
     add r8, 8                  
     add r9, 8                 
@@ -32,5 +33,6 @@ FINIS:
     vpsrldq ymm4, ymm3, 8       
     vpaddq ymm3, ymm3, ymm4     
     movq rdx, xmm3              
-    add rdx, rax                
+    add rdx, rax 
+    
     ret
