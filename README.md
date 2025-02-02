@@ -119,6 +119,8 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
 #### **C Implementation**
 
+    ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/994562fb12fc836ea42b077cd0c33300f6dceeec/BUILD/c_dotproduct.png)
+
 ---
 
 ### **iv.) Screenshot of the Program Output with Correctness Check**
