@@ -117,7 +117,7 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 
 ### **iii.) Screenshot of the Program Output with Correctness Check**
 
-**C Implementation**
+### **C Implementation**
     
   ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/994562fb12fc836ea42b077cd0c33300f6dceeec/BUILD/c_dotproduct.png)
     
@@ -127,16 +127,31 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
 ### **iv.) Screenshot of the Program Output with Correctness Check**
 #### **x86-64 Implementation**
 
+   ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/x86_dotproduct.png)
+
+   
 ---
 
 ### **v.) Screenshot of the Program Output with Correctness Check**
 #### **XMM (SIMD 128-bit) Implementation**
+
+  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/x86_dotproduct.png)
+
 
 ---
 
 ### **vi.) Screenshot of the Program Output with Correctness Check**
 #### **YMM (SIMD 256-bit) Implementation**
 
+  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/ymm_dotproduct.png)
+
+    
 ---
 
+#### **YMM (SIMD 256-bit) Implementation**
+
+  ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/d88dcf769a3944ccb5e90f4668c62ecfbe2cd415/BUILD/error__checking.png)
+
+
+---
 ### **vii.) Discussion**
