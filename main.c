@@ -20,7 +20,7 @@ int64_t dotProduct(int64_t  arrA[], int64_t  arrB[], size_t  arrSize) {
 
 int main() {
 
-    const size_t ARRAY_SIZE = 1 << 30;
+    const size_t ARRAY_SIZE = 1 << 20;
     int iteration = 30;
 
     const size_t ARRAY_BYTES = ARRAY_SIZE * sizeof(int64_t);
