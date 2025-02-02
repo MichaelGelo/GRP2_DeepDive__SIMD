@@ -10,9 +10,20 @@
 
 ---
 
+## **Project Overview**
+This project involves implementing and comparing the performance of four versions of a kernel:
+1. **C Program**
+2. **x86-64 Assembly Language (non-SIMD)**
+3. **x86 SIMD AVX2 Assembly Language using XMM register**
+4. **x86 SIMD AVX2 Assembly Language using YMM register**
+
+The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if memory constraints exist) and handles boundary conditions for SIMD operations. Each kernel is executed 30 times, and the average execution time is recorded. Correctness is checked against the C program.
+
+---
+
 ### **i.) Screenshot of the Program Output with Execution Time for All Cases**
 - **C**
-- **x86-64**
+- **x86-64 Non-SIMD Assembly**
 - **XMM (SIMD 128-bit)**
 - **YMM (SIMD 256-bit)**
 
@@ -20,12 +31,12 @@
 
 ### **ii.) Comparative Table of Execution Time and Performance Analysis**
 
-| Implementation       | Execution Time | Performance Analysis |
-|----------------------|----------------|----------------------|
-| **C**                |                |                      |
-| **x86-64**           |                |                      |
-| **XMM (128-bit)**    |                |                      |
-| **YMM (256-bit)**    |                |                      |
+| Implementation       | Execution Time (n = 2^20) | Execution Time (n = 2^26) | Execution Time (n = 2^30) | Performance Analysis |
+|----------------------|---------------------------|---------------------------|---------------------------|----------------------|
+| **C**                |                           |                           |                           |                      |
+| **x86-64**           |                           |                           |                           |                      |
+| **XMM (128-bit)**    |                           |                           |                           |                      |
+| **YMM (256-bit)**    |                           |                           |                           |                      |
 
 ---
 
