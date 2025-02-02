@@ -28,28 +28,55 @@ The program initializes vectors of size `n = {2^20, 2^26, 2^30}` (or smaller if 
       Array size (1<<20)
     
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474755074_1768305043952008_2711861187529911297_n.png)
+
+      Array size (1<<26)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475272895_1325767355289146_1545542814377239726_n.png)
+
+      Array size (1<<30)
+      
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269360_2164573430681115_1307590721420646016_n.png)
     
   - **x86-64 Non-SIMD Assembly**
 
       Array size (1<<20)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475194725_1736496846911762_735406358650725671_n.png)
+
+      Array size (1<<26)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475442694_1125300672399420_2517737751647477588_n.png)
+
+      Array size (1<<30)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475385528_1508077773913869_8691960589247389294_n.png)
       
   - **XMM (SIMD 128-bit)**
 
       Array size (1<<20)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/55d76759b54ee4c7d862e49f8a48868a1d99c0c6/BUILD/475723788_2370893926580143_8187849500300075197_n.png)
+
+      Array size (1<<26)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475269690_635886395663300_4058106138543798378_n.png)
+
+      Array size (1<<30)
+      
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/475038963_599770142770932_4623282796854049379_n.png)
       
   - **YMM (SIMD 256-bit)**
 
       Array size (1<<20)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475446949_2391484044535579_3452130950553545406_n.png)
+
+      Array size (1<<26)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/572476b601bcd9711d1ef485ef715be3f31cd290/BUILD/475236189_2430262020654696_1652702669333535164_n.png)
+
+      Array size (1<<30)
+    
       ![image alt](https://github.com/MichaelGelo/GRP2_DeepDive__SIMD/blob/03cc7ce30d35a979dbded7e1edc7cfbbef8de4fc/BUILD/474723815_549255591483961_3357579152647604848_n.png)
 **RELEASE**
 ---
